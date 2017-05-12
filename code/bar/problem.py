@@ -3,6 +3,7 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
+from pkg import *
 plt.figure(figsize=(12,6))
 problem = ('Professional disagree',
 		'Less employment information',
@@ -15,8 +16,9 @@ problem = ('Professional disagree',
 x_pos = np.arange(len(problem))
 performance = [41.28,43.12,44.04,26.61,22.02,16.51,54.13,0.92]
 
-plt.bar(x_pos,performance,0.35,color='b',align='center',alpha=0.8)
+ret = plt.bar(x_pos,performance,0.35,color='b',align='center',alpha=0.8)
 plt.xticks(x_pos,problem,rotation=-10)
 plt.ylabel('percentage (%)')
 plt.title('Employment problems')
+autolabel(ret)
 plt.show()
