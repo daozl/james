@@ -10,6 +10,6 @@ performance = [4.59,23.85,32.11,39.45]
 
 plt.bar(x_pos,performance,0.35,color='b',align='center',alpha=0.8)
 plt.xticks(x_pos,grade)
-plt.ylabel('percentage')
+plt.ylabel('percentage (%)')
 plt.title('The percentage of grade')
 plt.show()
