@@ -23,6 +23,8 @@ if __name__ == '__main__':
 						N	师资水平满意度
 						O	专业学科对就业的帮助
 						P	课程设置合理情况
+						exit 退出程序
+
 						: """)
         if commond == 'A':
 	        os.system("python pie/SexScale.py")
