@@ -5,27 +5,21 @@ import os
 if __name__ == '__main__':
     while True:
         commond = raw_input("""
-									请输入你关心的数据	
+		  Please input what data you about	
 
-						A	男女比例
-						B	年级比例
-						C	专业比例
-						D	工作单位类型
-						E	工作行业类别
-						F	就业单位所属地区
-						G	就业单位所属区域级别
-						H	工作与专业的吻合度
-						I	专业不对口的主要原因
-						J	第一份薪资和目前薪资情况
-						K	获得第一份工作的时间
-						L	就业过程中面临的问题
-						M	对专业的认知
-						N	师资水平满意度
-						O	专业学科对就业的帮助
-						P	课程设置合理情况
-						exit 退出程序
+	A: male to female ratio			B: Grade ratio
+	C: professional ratio			D: Work unit type
+	E: job industry category		F: The area that work belongs 
+	G: Working city level			H: work and professional consistency 
+	I: the main reason for professional disagreement	
+	J: the first salary and the current salary situation
+	K: get the first working hours 
+	L: the problems faced in the employment process 
+	M: awareness of the profession		N: teacher level satisfaction 
+	O: Professional disciplines help with employment 	
+	P: Reasonable setting of course		Q: exit 
 
-						: """)
+	: """)
         if commond == 'A':
 	        os.system("python pie/SexScale.py")
         elif commond == 'B':
@@ -58,13 +52,13 @@ if __name__ == '__main__':
 	        os.system("python pie/course.py")
         elif commond == 'P': 
 	        os.system("python pie/curriculum.py")
-        elif commond == 'exit':
+        elif commond == 'Q':
             break
         else:
             print """
-						您输入的有错，请重新输入！						
-				 
-				 """
+					Your input is error! Please input again!
+				
+				"""
 
 
 
