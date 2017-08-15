@@ -14,8 +14,8 @@ for theta in [2]:                       #for 循环，迭代列表[2] 其实也�
 			G=nx.random_graphs.barabasi_albert_graph(M,2)	#生成一个n=1000，m=3的BA无标度网络
 			#  print(theta)									#输出theta指向的值 也就是 2
 			#  print(c)										#打印c指向的值
-
-
+			
+			
 			W=[0 for i in G.nodes()]						#运用列表生成器，产生所有算素都为零的列表W
 			for i in G.nodes():							
 				W[i]=pow(G.degree(i),theta)                 #G.degree()返回某个节点的度 pow() 计算幂
@@ -25,7 +25,7 @@ for theta in [2]:                       #for 循环，迭代列表[2] 其实也�
 			F=[0 for i in G.nodes()]					#生成一个元素为节点的度的2次幂的列表F	
 			for i in G.nodes():
 				F[i]=W[i]
-
+			
 			n=0
 			for i in G.nodes(): # 找出节点的度最大的节点 n 指向节点的值
 				if G.degree(i)>G.degree(n):
@@ -60,8 +60,8 @@ for theta in [2]:                       #for 循环，迭代列表[2] 其实也�
 						for a in G.edges(n):
 							F[a[1]]=F[a[1]]+F[n]*W[a[1]]/WS
 						G.remove_node(n)
-                #print(nx.number_of_nodes(G))
-            #print(nx.number_of_nodes(G))
+			    #print(nx.number_of_nodes(G))
+			#print(nx.number_of_nodes(G))
 			num=num+nx.number_of_nodes(G)
         number.append(num/100)
 plt.plot(W,'b',label="hh")
